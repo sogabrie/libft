@@ -20,7 +20,7 @@ int main()
 
 	char b[20] = "asdfxcvb";
 	char a[20] = "llllllllll";
-	ft_strlcpy(a, b, 5);
+	ft_strlcat(a, b, 5);
 	for (int i = 0; i < 20; ++i)
 		printf("i = %d a = %d \n",i, a[i]);
 

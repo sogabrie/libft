@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-unsigned char *ft_memset(unsigned char *a, int c, size_tlen)
+unsigned char *ft_memset(unsigned char *a, int c, size_t len)
 {
 	while (0 < len)
 	{

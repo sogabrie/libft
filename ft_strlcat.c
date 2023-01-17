@@ -1,9 +1,9 @@
 #include "libft.h"
 
-unsigned int ft_strlcat(char *a, const char *b, unsigned int s)
+size_t ft_strlcat(char *a, const char *b, size_t s)
 {
-	unsigned int i;
-	int			 f;
+	size_t	i;
+	int		f;
 
 	i = ft_strlen(a);
 	while (i < s - 1)
