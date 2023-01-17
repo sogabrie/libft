@@ -1,7 +1,11 @@
-unsigned char * ft_memcpy( unsigned char *a, const unsigned char *b, unsigned int s)
-{
-	unsigned int i;
+#include "libft.h"
 
+unsigned char *ft_memcpy( unsigned char *a, const unsigned char *b, size_t s)
+{
+	size_t i;
+
+	if (!a && !b)
+		return (0);
 	i = 0;
 	while (i < s)
 	{

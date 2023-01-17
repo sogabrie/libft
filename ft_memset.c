@@ -10,7 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned char *ft_memset(unsigned char *a, int c, unsigned int len)
+#include "libft.h"
+
+unsigned char *ft_memset(unsigned char *a, int c, size_tlen)
 {
 	while (0 < len)
 	{
