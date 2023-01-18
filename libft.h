@@ -1,7 +1,7 @@
 #ifndef LIBFT_H
 #define LIBFT_H
 
-#include "stdlib.h"
+#include <stdlib.h>
 
 int ft_isalpha(int a );
 int ft_isdigit(int a );
@@ -18,5 +18,7 @@ size_t ft_strlcat(char *dest, const char *src, size_t size);
 int ft_toupper(int a);
 int ft_tolower(int a);
 char *ft_strchr(const char *s, int c);
+char *ft_strrchr(const char *s, int c);
+int ft_strncmp(const char *s1, const char *s2, size_t n);
 
 #endif
