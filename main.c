@@ -36,6 +36,13 @@ int main()
 	a2 = ft_memchr(a3,'s',3);
 	printf("memchr = %c  true = %d \n", *a2, (a2 == (a3 + 2)));
 	printf("strstr = %s \n", ft_strnstr("asdfghjklzxcvbnmqw","hjk",15));
+	printf("atoi = %d \n",ft_atoi("2147483647"));
+	char *a4 = ft_calloc(10, 4);
+	a4[9] = 49;
+	for (int i = 0; i < 10;++i)
+		printf("calloc = %c \n",a4[i]);
+	char *a5 = ft_strdup("zsxdcfv");
+	printf("strdup = %s \n",a5);
 
 	return (0);
 }
