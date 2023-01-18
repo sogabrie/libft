@@ -24,5 +24,10 @@ int main()
 	for (int i = 0; i < 20; ++i)
 		printf("i = %d a = %d \n",i, a[i]);
 
+	int a1 = ft_toupper('a');
+	printf("%c \n",a1);
+	printf("%c \n",ft_tolower(a1));
+	char *a2 = ft_strchr("asdfghj", 'g');
+	printf("strchr = %c \n" , *a2);
 	return (0);
 }
