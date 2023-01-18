@@ -9,5 +9,21 @@
 /*   Updated: 2023/01/18 17:35:56 by sogabrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
-void *ft_mem
+void *ft_memchr(const void *s, int c, size_t n)
+{
+	unsigned char	*a;
+	size_t			i;
+
+	i = 0;
+	a = (unsigned char *) s;
+	while (i < n)
+	{
+		if (*a == c)
+			return (a);
+		++a;
+		++i;
+	}
+	return (0);
+}

@@ -29,9 +29,13 @@ int main()
 	printf("%c \n",ft_tolower(a1));
 	char *a2 = ft_strchr("asdfghj", 'g');
 	printf("strchr = %c \n" , *a2);
-	char *a3 = "asasas";
+	char *a3 = "aassas";
 	a2 = ft_strrchr(a3,'s');
-	printf("strrchr = %c  true = %d \n", *a2, (a2 == (a3 + 1)));
+	printf("strrchr = %c  true = %d \n", *a2, (a2 == (a3 + 5)));
 	printf("strncmp = %d \n", ft_strncmp("asdfghjkl","asadfghjkl", 9));
+	a2 = ft_memchr(a3,'s',3);
+	printf("memchr = %c  true = %d \n", *a2, (a2 == (a3 + 2)));
+	printf("strstr = %s \n", ft_strnstr("asdfghjklzxcvbnmqw","hjk",15));
+
 	return (0);
 }
