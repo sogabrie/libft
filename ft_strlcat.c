@@ -1,21 +1,11 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: sogabrie <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/05 23:32:52 by sogabrie          #+#    #+#             */
-/*   Updated: 2022/10/09 13:41:08 by sogabrie         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+#include "libft.h"
 
-unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
+size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
-	unsigned int	i1;
-	unsigned int	i2;
-	unsigned int	j;
-	unsigned int	g;
+	size_t	i1;
+	size_t	i2;
+	size_t	j;
+	size_t	g;
 
 	i1 = 0;
 	i2 = 0;
