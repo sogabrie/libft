@@ -32,6 +32,6 @@ int main()
 	char *a3 = "asasas";
 	a2 = ft_strrchr(a3,'s');
 	printf("strrchr = %c  true = %d \n", *a2, (a2 == (a3 + 1)));
-	printf("strncmp = %d \n", ft_strncmp("asdfghjkl","asdfghjkl", 9));
+	printf("strncmp = %d \n", ft_strncmp("asdfghjkl","asadfghjkl", 9));
 	return (0);
 }
