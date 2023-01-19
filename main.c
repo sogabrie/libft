@@ -27,8 +27,8 @@ int main()
 	int a1 = ft_toupper('a');
 	printf("%c \n",a1);
 	printf("%c \n",ft_tolower(a1));
-	char *a2 = ft_strchr("asdfghj", 'g');
-	printf("strchr = %c \n" , *a2);
+	char *a2 = ft_strchr("asdfghj", 'i');
+	printf("strchr = %c \n" , a2?*a2:'M');
 	char *a3 = "aassas";
 	a2 = ft_strrchr(a3,'s');
 	printf("strrchr = %c  true = %d \n", *a2, (a2 == (a3 + 5)));
@@ -45,6 +45,7 @@ int main()
 	printf("strdup = %s \n",a5);
 	printf("substr = %s \n", ft_substr("aaaaasdsdsdll",0,6));
 	printf("strjoin = %s \n", ft_strjoin("aaa", "sss"));
+	printf("strtrim = %s \n", ft_strtrim("aaasssfffdddssfsfsfaaa","sfa"));
 
 	return (0);
 }
