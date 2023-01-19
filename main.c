@@ -43,6 +43,8 @@ int main()
 		printf("calloc = %c \n",a4[i]);
 	char *a5 = ft_strdup("zsxdcfv");
 	printf("strdup = %s \n",a5);
+	printf("substr = %s \n", ft_substr("aaaaasdsdsdll",0,6));
+	printf("strjoin = %s \n", ft_strjoin("aaa", "sss"));
 
 	return (0);
 }
