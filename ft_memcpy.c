@@ -1,6 +1,6 @@
 #include "libft.h"
 
-unsigned char *ft_memcpy( unsigned char *a, const unsigned char *b, size_t s)
+void *ft_memcpy(void *a, const void *b, size_t s)
 {
 	size_t i;
 
@@ -9,7 +9,7 @@ unsigned char *ft_memcpy( unsigned char *a, const unsigned char *b, size_t s)
 	i = 0;
 	while (i < s)
 	{
-		a[i] = b[i];
+		((unsigned char *)a)[i] = ((unsigned char *)b)[i];
 		++i;
 	}
 	return (a);
