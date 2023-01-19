@@ -46,7 +46,7 @@ int main()
 	printf("substr = %s \n", ft_substr("aaaaasdsdsdll",0,6));
 	printf("strjoin = %s \n", ft_strjoin("aaa", "sss"));
 	printf("strtrim = %s \n", ft_strtrim("aaasssfffdddssfsfsfaaa","sfa"));
-	char **st = ft_split("asd dfg ewr tyu fgh cvb",' ');
+	char **st = ft_split("asd    dfg ewr tyu fgh cvb",' ');
 	int ii = 0;
 	if (st)
 		while (st[ii])
