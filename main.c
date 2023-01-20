@@ -1,6 +1,17 @@
 #include <stdio.h>
 #include "libft.h"
 
+char	fo1(unsigned int a, char b)
+{
+	return (b + a);
+}
+
+void	fo2(unsigned int i, char *mas)
+{
+	mas[i] += i;
+	//return (mas);
+}
+
 int main()
 {
 	int size = 1;
@@ -52,6 +63,10 @@ int main()
 		while (st[ii])
 			printf("split = %s\n",st[ii++]);
 	printf("itoa = %s \n", ft_itoa(-4584));
+	printf("strmapi = %s \n", ft_strmapi("aaaaaa", fo1));
+	char aa[10] = "aaaaaa";
+	ft_striteri(aa, &fo2);
+	printf("striteri = %s \n", aa);
 
 	return (0);
 }
