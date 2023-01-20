@@ -18,6 +18,19 @@ int	fil(char *name)
 	return (open(name, O_WRONLY));
 }
 
+void crat(void *a)
+{
+	printf("============%s\n",a);
+}
+
+void	*cr(void *a)
+{
+	char *b = malloc(10);
+	printf("======CRCR===%s\n",a);
+	b[0] = ((char *)a)[0];
+	return (b);
+}
+
 int main()
 {
 	int size = 1;
@@ -80,12 +93,13 @@ int main()
 
 	printf("\n\n\t\tBONUS\n\n");
 
-	t_list *li = ft_lstnew("aaaaa");
-	t_list *li2 = ft_lstnew("ssss");
+	t_list *li = ft_lstnew("aaaaad");
+	t_list *li2 = ft_lstnew("sssssd");
 	ft_lstadd_front(&li, li2);
-	ft_lstadd_back(&li, ft_lstnew("ccccc"));
+	ft_lstadd_back(&li, ft_lstnew("cccccd"));
 	printf("lstsize = %d \n",ft_lstsize(li));
-	printf("lstlast = %s \n",ft_lstlast(li)->content); 
+	printf("lstlast = %s \n",ft_lstlast(li)->content);
+	ft_lstiter(li, crat);
 	while (li)
 	{
 		printf("lstnew and lstadd and lstadd_b = %s \n",li->content);
@@ -95,10 +109,14 @@ int main()
 	li2 = ft_lstnew(amal);
 	ft_lstdelone(li2, free);
 	amal = malloc(16);
+	amal[0] = 'a';
 	li2 = ft_lstnew(amal);
 	amal = malloc(16);
+	amal[0] = 'f';
 	ft_lstadd_back(&li2,ft_lstnew(amal));
+	t_list *am = ft_lstmap(li2, cr, free);
 	ft_lstclear(&li2, free);
+	ft_lstclear(&am, free);
 
 	return (0);
 }
