@@ -6,17 +6,17 @@
 /*   By: sogabrie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 16:17:44 by sogabrie          #+#    #+#             */
-/*   Updated: 2023/01/19 21:17:46 by sogabrie         ###   ########.fr       */
+/*   Updated: 2023/01/20 15:31:53 by sogabrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char *ft_strrchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
-	char *a;
-	char *a1;
+	char	*a;
+	char	*a1;
 
 	a = (char *) s;
-	a1 =(char *) 0;
+	a1 = (char *) 0;
 	while (*a != 0)
 	{
 		if (*a == c)

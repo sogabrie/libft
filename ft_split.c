@@ -6,13 +6,13 @@
 /*   By: sogabrie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 20:42:12 by sogabrie          #+#    #+#             */
-/*   Updated: 2023/01/19 23:21:04 by sogabrie         ###   ########.fr       */
+/*   Updated: 2023/01/20 15:21:43 by sogabrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t siz_m(char const *s2, char c)
+size_t	siz_m(char const *s2, char c)
 {
 	size_t	i;
 
@@ -27,9 +27,9 @@ size_t siz_m(char const *s2, char c)
 	return (i);
 }
 
-size_t mas_mal(char **ptr, char const *s2,char * s3, size_t i)
+size_t	mas_mal(char **ptr, char const *s2, char *s3, size_t i)
 {
-	size_t j;
+	size_t	j;
 
 	if (!s3)
 		j = ft_strlen(s2);
@@ -42,10 +42,10 @@ size_t mas_mal(char **ptr, char const *s2,char * s3, size_t i)
 	return (0);
 }
 
-size_t mas(char **ptr, char const *s2, char c)
+size_t	mas(char **ptr, char const *s2, char c)
 {
 	size_t	i;
-	char 	*s3;
+	char	*s3;
 
 	i = 0;
 	while (s2)
@@ -54,7 +54,7 @@ size_t mas(char **ptr, char const *s2, char c)
 		if (s3)
 		{
 			if (mas_mal(ptr, s2, s3, i))
-					return (2);
+				return (2);
 			++s3;
 			s2 = s3;
 			if (ptr[i][0])
@@ -70,7 +70,7 @@ size_t mas(char **ptr, char const *s2, char c)
 	return (0);
 }
 
-void cl(char **ptr, size_t f)
+void	cl(char **ptr, size_t f)
 {
 	size_t	i;
 
@@ -85,12 +85,12 @@ void cl(char **ptr, size_t f)
 	}
 }
 
-char **ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
-	size_t	f;
-	size_t	i;
+	size_t		f;
+	size_t		i;
 	char const	*s2;
-	char	**ptr;
+	char		**ptr;
 
 	s2 = s;
 	f = 0;

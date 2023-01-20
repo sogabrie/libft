@@ -51,6 +51,7 @@ int main()
 	if (st)
 		while (st[ii])
 			printf("split = %s\n",st[ii++]);
+	printf("itoa = %s \n", ft_itoa(-4584));
 
 	return (0);
 }

@@ -6,11 +6,11 @@
 /*   By: sogabrie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 15:19:10 by sogabrie          #+#    #+#             */
-/*   Updated: 2023/01/18 15:38:17 by sogabrie         ###   ########.fr       */
+/*   Updated: 2023/01/20 15:34:21 by sogabrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_toupper(int a)
+int	ft_toupper(int a)
 {
 	if (a > 96 && a < 123)
 		return (a - 32);

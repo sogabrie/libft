@@ -6,11 +6,11 @@
 /*   By: sogabrie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 15:34:12 by sogabrie          #+#    #+#             */
-/*   Updated: 2023/01/18 15:37:48 by sogabrie         ###   ########.fr       */
+/*   Updated: 2023/01/20 15:33:59 by sogabrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_tolower(int a)
+int	ft_tolower(int a)
 {
 	if (a > 64 && a < 91)
 		return (a + 32);

@@ -6,14 +6,14 @@
 /*   By: sogabrie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 15:49:27 by sogabrie          #+#    #+#             */
-/*   Updated: 2023/01/19 20:51:05 by sogabrie         ###   ########.fr       */
+/*   Updated: 2023/01/20 15:23:16 by sogabrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char *ft_strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
 	int	i;
-	
+
 	i = 0;
 	while (s[i] != 0)
 	{
@@ -23,4 +23,3 @@ char *ft_strchr(const char *s, int c)
 	}
 	return (0);
 }
-
