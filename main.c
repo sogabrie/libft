@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "libft.h"
+#include <fcntl.h>
 
 char	fo1(unsigned int a, char b)
 {
@@ -10,6 +11,11 @@ void	fo2(unsigned int i, char *mas)
 {
 	mas[i] += i;
 	//return (mas);
+}
+
+int	fil(char *name)
+{
+	return (open(name, O_WRONLY));
 }
 
 int main()
@@ -67,6 +73,10 @@ int main()
 	char aa[10] = "aaaaaa";
 	ft_striteri(aa, &fo2);
 	printf("striteri = %s \n", aa);
+	ft_putchar_fd('t',fil("a1.txt"));
+	ft_putstr_fd("aaaaaaaaa",fil("a2.txt"));
+	ft_putendl_fd("aaaaaaaaaa",fil("a3.txt"));
+	ft_putnbr_fd(2569, fil("a4.txt"));
 
 	return (0);
 }
