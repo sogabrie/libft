@@ -78,5 +78,27 @@ int main()
 	ft_putendl_fd("aaaaaaaaaa",fil("a3.txt"));
 	ft_putnbr_fd(2569, fil("a4.txt"));
 
+	printf("\n\n\t\tBONUS\n\n");
+
+	t_list *li = ft_lstnew("aaaaa");
+	t_list *li2 = ft_lstnew("ssss");
+	ft_lstadd_front(&li, li2);
+	ft_lstadd_back(&li, ft_lstnew("ccccc"));
+	printf("lstsize = %d \n",ft_lstsize(li));
+	printf("lstlast = %s \n",ft_lstlast(li)->content); 
+	while (li)
+	{
+		printf("lstnew and lstadd and lstadd_b = %s \n",li->content);
+		li = li->next;
+	}
+	char *amal = malloc(16);
+	li2 = ft_lstnew(amal);
+	ft_lstdelone(li2, free);
+	amal = malloc(16);
+	li2 = ft_lstnew(amal);
+	amal = malloc(16);
+	ft_lstadd_back(&li2,ft_lstnew(amal));
+	ft_lstclear(&li2, free);
+
 	return (0);
 }

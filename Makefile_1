@@ -1,13 +1,13 @@
 CC = gcc
-CFLAGS = -c -Wall -Wextra -Werror
+CFLAGS = -L. -lft -o 
 
 all: a
 
-a: *.o
-	$(CC) *.o -o a
+a: main.o
+	$(CC) main.o $(CFLAGS) a
 
-*.o: *.c
-	$(CC) $(CFLAGS) *.c
+main.o: main.c
+	$(CC) -c  main.c
 
 clean:
-	rm -rf *.o a
+	rm -rf main.o a
