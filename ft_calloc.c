@@ -6,7 +6,7 @@
 /*   By: sogabrie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 15:08:16 by sogabrie          #+#    #+#             */
-/*   Updated: 2023/01/20 16:20:35 by sogabrie         ###   ########.fr       */
+/*   Updated: 2023/01/21 15:54:03 by sogabrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*pt;
 
+	if (nmemb == SIZE_MAX || size == SIZE_MAX)
+		return (0);
 	pt = malloc(nmemb * size);
 	if (!pt)
 		return (0);

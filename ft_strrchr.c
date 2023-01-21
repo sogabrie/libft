@@ -6,7 +6,7 @@
 /*   By: sogabrie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 16:17:44 by sogabrie          #+#    #+#             */
-/*   Updated: 2023/01/20 15:31:53 by sogabrie         ###   ########.fr       */
+/*   Updated: 2023/01/21 15:45:17 by sogabrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,11 @@ char	*ft_strrchr(const char *s, int c)
 	a1 = (char *) 0;
 	while (*a != 0)
 	{
-		if (*a == c)
+		if (*a == (unsigned char)c)
 			a1 = a;
 		++a;
 	}
+	if ((unsigned char)c == 0)
+		a1 = a;
 	return (a1);
 }

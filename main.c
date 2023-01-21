@@ -76,11 +76,11 @@ int main()
 	printf("substr = %s \n", ft_substr("aaaaasdsdsdll",0,6));
 	printf("strjoin = %s \n", ft_strjoin("aaa", "sss"));
 	printf("strtrim = %s \n", ft_strtrim("aaasssfffdddssfsfsfaaa","sfa"));
-	char **st = ft_split("asd    dfg ewr tyu fgh cvb",' ');
-	int ii = 0;
-	if (st)
-		while (st[ii])
-			printf("split = %s\n",st[ii++]);
+	//char **st = ft_split("asd    dfg ewr tyu fgh cvb",' ');
+	//int ii = 0;
+	//if (st)
+	//	while (st[ii])
+	//		printf("split = %s\n",st[ii++]);
 	printf("itoa = %s \n", ft_itoa(-4584));
 	printf("strmapi = %s \n", ft_strmapi("aaaaaa", fo1));
 	char aa[10] = "aaaaaa";
@@ -117,6 +117,8 @@ int main()
 	t_list *am = ft_lstmap(li2, cr, free);
 	ft_lstclear(&li2, free);
 	ft_lstclear(&am, free);
+	printf("===============================\n");
+	ft_split("                ",' ');
 
 	return (0);
 }

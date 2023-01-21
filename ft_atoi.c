@@ -6,7 +6,7 @@
 /*   By: sogabrie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 14:44:11 by sogabrie          #+#    #+#             */
-/*   Updated: 2023/01/20 15:06:02 by sogabrie         ###   ########.fr       */
+/*   Updated: 2023/01/21 18:58:31 by sogabrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	ft_atoi(const char *nptr)
 		++i;
 		f = 1;
 	}
-	if (nptr[i] != 0 && nptr[i] == '+')
+	else if (nptr[i] != 0 && nptr[i] == '+')
 		++i;
 	while (nptr[i] != 0 && ft_isdigit(nptr[i]))
 		ptr = (10 * ptr) + (nptr[i++] - 48);

@@ -6,7 +6,7 @@
 /*   By: sogabrie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 15:17:00 by sogabrie          #+#    #+#             */
-/*   Updated: 2023/01/20 15:17:02 by sogabrie         ###   ########.fr       */
+/*   Updated: 2023/01/21 15:13:09 by sogabrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,6 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 			return (1);
 		if (a1[s] < a2[s])
 			return (-1);
-		if (a1[s] == '\0' || a2[s] == '\0')
-			return (0);
 		++s;
 	}
 	return (0);

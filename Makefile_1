@@ -1,7 +1,7 @@
 CC = gcc
 CFLAGS = -L. -lft -o 
 
-all: a
+all: a ft_split.c
 
 a: main.o
 	$(CC) main.o $(CFLAGS) a
