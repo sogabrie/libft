@@ -6,7 +6,7 @@
 /*   By: sogabrie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 15:24:42 by sogabrie          #+#    #+#             */
-/*   Updated: 2023/01/22 20:14:34 by sogabrie         ###   ########.fr       */
+/*   Updated: 2023/01/22 23:43:31 by sogabrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	size_t	j;
 	size_t	g;
 
-	i2 = ft_strlen(src);;
+	i2 = ft_strlen(src);
 	g = 0;
 	if (!size)
 		return (i2);

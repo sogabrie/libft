@@ -6,7 +6,7 @@
 /*   By: sogabrie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 20:42:12 by sogabrie          #+#    #+#             */
-/*   Updated: 2023/01/22 22:26:48 by sogabrie         ###   ########.fr       */
+/*   Updated: 2023/01/22 23:37:40 by sogabrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,18 +27,18 @@ void	coufri(char const *s, char c, char **ptr, size_t *i)
 		return ;
 	}		
 	*i = 0;
-	if (s[j--] != c)//&& s[j] != 0)
+	if (s[j--] != c)
 		++(*i);
-	while(s[++j])
+	while (s[++j])
 		if (s[j] == c && s[j - 1] != c)
-		   ++(*i);
+			++(*i);
 	if (s[j -1] != c)
 		++(*i);
 }
 
-size_t mal(char **ptr, char *s, char *s2, size_t j)
+size_t	mal(char **ptr, char *s, char *s2, size_t j)
 {
-	size_t i;
+	size_t	i;
 
 	i = s2 - s;
 	ptr[j] = malloc((i + 1) * sizeof(char));
@@ -50,22 +50,19 @@ size_t mal(char **ptr, char *s, char *s2, size_t j)
 	return (0);
 }
 
-
-size_t	mas2(char **ptr, char *s, char c)
+size_t	mas2(char **ptr, char *s, char c, char *s2)
 {
-	char	*s2;
 	size_t	j;
 
 	j = 0;
-	s2 = s;
 	while (*s)
 	{
 		if ((*s2 == c || *s2 == 0) && *(s2 - 1) != c && !(s2 == s))
 		{
-			if(mal(ptr, s, s2, j))
+			if (mal(ptr, s, s2, j))
 				return (5);
 			if (!*s2)
-			   return (0);	
+				return (0);
 			s = ++s2;
 			++j;
 		}
@@ -74,48 +71,40 @@ size_t	mas2(char **ptr, char *s, char c)
 			if (*s2 == 0)
 				s = s2;
 			else
-			{
-				++s2;
-				if (*(s2 - 1) == c)
+				if (*(++s2 - 1) == c)
 					s = s2;
-			}
 		}
 	}
 	return (0);
 }
 
-size_t	mas(char **ptr, const char *s, char c, size_t i)
+size_t	mas(char **ptr, const char *s, char c)
 {
 	char	*s1;
 	char	*s2;
+	char	*s3;
 
-	if (i == 1)
-	{
-		ptr[0] = malloc(1);
-		if (!ptr[0])
-			return (5);
-		ptr[0] = 0;
-		return (0);
-	}
 	s1 = (char *) s;
 	if (c == 0)
 	{
-		s2 = s1;
-		s1 = s2 + ft_strlen(s) + 1;
-		return (mal(ptr, s2, s1, 0));
+		s3 = s1;
+		s1 = s3 + ft_strlen(s) + 1;
+		return (mal(ptr, s3, s1, 0));
 	}
-	return (mas2(ptr, s1, c));
+	s2 = s1;
+	return (mas2(ptr, s1, c, s2));
 }
 
 char	**ft_split(char const *s, char c)
 {
-	char	**ptr = 0;
+	char	**ptr;
 	size_t	i;
 	size_t	j;
 
 	i = 1;
 	j = 0;
-	if (s != 0 && *s != 0) //&& c != 0)
+	ptr = 0;
+	if (s != 0 && *s != 0)
 		coufri(s, c, ptr, &i);
 	ptr = (char **)ft_calloc(i, (sizeof(char *)));
 	if (!ptr)
@@ -123,7 +112,7 @@ char	**ft_split(char const *s, char c)
 	while (j < i)
 		ptr[j++] = 0;
 	if (i != 1)
-		j = mas(ptr, s, c, i);
+		j = mas(ptr, s, c);
 	if (j == 5)
 	{
 		coufri(s, c, ptr, &j);
