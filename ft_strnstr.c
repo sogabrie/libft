@@ -6,7 +6,7 @@
 /*   By: sogabrie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 15:30:15 by sogabrie          #+#    #+#             */
-/*   Updated: 2023/01/20 15:31:02 by sogabrie         ###   ########.fr       */
+/*   Updated: 2023/01/22 20:56:02 by sogabrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ char	*ft_strnstr(const char *big, const char *lit, size_t len)
 	l = ft_strlen(lit);
 	if (bi == lit || l == 0)
 		return (bi);
+	if (!len)
+		return (0);
 	i = 0;
 	while (bi[i] != 0 && i < len)
 	{

@@ -6,7 +6,7 @@
 /*   By: sogabrie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 15:32:25 by sogabrie          #+#    #+#             */
-/*   Updated: 2023/01/20 15:32:27 by sogabrie         ###   ########.fr       */
+/*   Updated: 2023/01/22 22:57:44 by sogabrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char const	*pt;
 
 	pt = s1;
-	if (!pt && !set)
+	if (!pt || !set)
 		return (0);
 	while (*pt && ft_strchr(set, *pt))
 		++pt;

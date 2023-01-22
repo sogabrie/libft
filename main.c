@@ -118,7 +118,9 @@ int main()
 	ft_lstclear(&li2, free);
 	ft_lstclear(&am, free);
 	printf("===============================\n");
-	ft_split("aaaaaa  aa  ",' ');
+	char ** gf = ft_split("                  olol",' ');
+    
+	printf("\n split = %s\n",gf[0]);
 
 	return (0);
 }

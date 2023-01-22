@@ -6,7 +6,7 @@
 /*   By: sogabrie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 15:33:32 by sogabrie          #+#    #+#             */
-/*   Updated: 2023/01/21 20:50:23 by sogabrie         ###   ########.fr       */
+/*   Updated: 2023/01/22 21:03:55 by sogabrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,27 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*ptr;
-	char	*cpy;
-	size_t 	i;
-	size_t	j;
+	size_t		i;
+	char		*pod;
+	size_t		s_len;
 
-	j = ft_strlen(s);
-	cpy = (char *)s;
-	cpy = cpy + (start);
-	i = ft_strlen(cpy);
-	if (i < len)
-		len = i;
-	ptr = (char *)ft_calloc(len + 1, 1);
-	if (!ptr)
+	i = 0;
+	if (!s)
 		return (0);
-	if (j < start)
-		return (ptr);
-	ft_strlcpy(ptr, cpy, len + 1);
-	return (ptr);
+	s_len = ft_strlen(s);
+	if (start > s_len)
+		return (ft_strdup(""));
+	if (len > s_len)
+		len = s_len;
+	pod = malloc(sizeof(char) * (len + 1));
+	if (!pod)
+		return (0);
+	while (s[start] != '\0' && i < len)
+	{
+		pod[i] = s[start];
+		i++;
+		start++;
+	}
+	pod[i] = 0;
+	return (pod);
 }
