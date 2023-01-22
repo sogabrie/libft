@@ -118,7 +118,7 @@ int main()
 	ft_lstclear(&li2, free);
 	ft_lstclear(&am, free);
 	printf("===============================\n");
-	ft_split("                ",' ');
+	ft_split("--1-2--3---4----5-----42",'-');
 
 	return (0);
 }
